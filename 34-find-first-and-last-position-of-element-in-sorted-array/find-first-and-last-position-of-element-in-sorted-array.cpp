@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int lb(vector<int>a,int t){
+    int lb(vector<int>& a,int t){
         int l=0,r=a.size();
         while(l<r){
             int mid=l+(r-l)/2;
@@ -15,7 +15,7 @@ public:
         }
         return l;
     }
-    int ub(vector<int>a,int t){
+    int ub(vector<int>& a,int t){
         int l=0,r=a.size();
         while(l<r){
             int mid=l+(r-l)/2;
