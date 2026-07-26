@@ -7,7 +7,7 @@ public:
         for(int i:nums){
             s+=i;
             int t=s-k;
-            if(m.count(t)){
+            if(m.find(t)!=m.end()){
                 c+=m[t];
             }
             m[s]++;
