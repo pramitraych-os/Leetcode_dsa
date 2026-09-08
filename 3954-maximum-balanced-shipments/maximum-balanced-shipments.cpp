@@ -1,12 +1,16 @@
 class Solution {
 public:
     int maxBalancedShipments(vector<int>& weight) {
-        int c=0,mx=0;
+        stack<int>s;
+        int c=0;
         for(int i:weight){
-            mx=max(i,mx);
-            if(i<mx){
+            if(!s.empty()&&s.top()>i){
                 c++;
-                mx=0;
+                while(!s.empty()){
+                    s.pop();
+                }
+            }else{
+                s.push(i);
             }
         }
         return c;
